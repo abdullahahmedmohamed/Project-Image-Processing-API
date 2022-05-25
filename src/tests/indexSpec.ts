@@ -11,7 +11,7 @@ describe('Test Image Processing Api', () => {
     expect(res.headers['content-type']).toMatch(/image\/jpe?g/);
   });
 
-  it('Should get BadRequest response with array of errors when i send a request to "/api/images" with out and query string', async () => {
+  it('Should get BadRequest response with array of errors when i send a request to "/api/images" without any query string', async () => {
     const res = await server.get('/api/images');
 
     expect(res.statusCode).toBe(400);
